@@ -1,0 +1,75 @@
+/* Styling for the form container */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body{
+	background-color: grey;
+	text-color:green;
+}
+h1{
+	color: white;
+}
+h2{
+	color: white;
+}
+h3{
+	color: white;
+}
+h4{
+	color: white;
+}
+
+img{
+	max-height: 25%;
+	max-width: 25%;
+	border: #000000 6px solid;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  width:
+}
+
+
+select {
+  width: 10%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #FF5733;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+button:hover {
+  background-color: #FF4500;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}

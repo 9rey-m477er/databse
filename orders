@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+	<title>View Orders</title>
+
+<head>
+<body>
+
+	<h1>This is another heading</h1>
+	<h2>This is bnother heading</h2>
+	<h3>This is cnother heading</h3>
+	<h4>This is dnother heading</h4>
+	<p><b>This</b> is another <i>paragraph</i>.</p>
+	
+	<img src = ".\Images\hawaiianpizza.jpg">
+	
+	<a href="index.html">Menu</a>
+	<a href="PHP_Test.php">PHP</a>
+	
+
+</body>
+</html>
