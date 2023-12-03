@@ -5,16 +5,16 @@
 <?php
     $serverName = "spangili.database.windows.net";
     $connectionOptions = array(
-        "Database" => "your_database",
+        "Database" => "spangiliDatabase",
         "Uid" => "projectManager",
         "PWD" => "jBD9t6E8f!IY"
     );
     //Establishes the connection
     $conn = sqlsrv_connect($serverName, $connectionOptions);
-    $tsql= "SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
-         FROM [SalesLT].[ProductCategory] pc
-         JOIN [SalesLT].[Product] p
-         ON pc.productcategoryid = p.productcategoryid";
+    $tsql= "SELECT c.CustomerName,i.food,o.Quantity,i.cost,(o.Quantity * i.cost) AS TotalPrice FROM customers c
+	JOIN orders o ON c.CustomerID = o.CustomerID
+	JOIN items i ON o.ItemID = i.ItemID
+	ORDER BY c.CustomeriD;
     $getResults= sqlsrv_query($conn, $tsql);
     echo ("Reading data from table" . PHP_EOL);
     if ($getResults == FALSE)
