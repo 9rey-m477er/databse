@@ -11,10 +11,9 @@
     );
     //Establishes the connection
     $conn = sqlsrv_connect($serverName, $connectionOptions);
-    $tsql= "SELECT c.CustomerName,i.food,o.Quantity,i.cost,(o.Quantity * i.cost) AS TotalPrice FROM customers c
-	JOIN orders o ON c.CustomerID = o.CustomerID
-	JOIN items i ON o.ItemID = i.ItemID
-	ORDER BY c.CustomeriD";
+    $tsql= "SELECT i.ItemID, i.food, SUM(o.Quantity) OVER (PARTITION BY i.ItemID) AS TotalQuantityOrdered FROM items i
+JOIN orders o ON i.ItemID = o.ItemID
+ORDER BY TotalQuantityOrdered DESC, i.ItemID";
     $getResults= sqlsrv_query($conn, $tsql);
     echo ("Reading data from table" . PHP_EOL);
     if ($getResults == FALSE)
